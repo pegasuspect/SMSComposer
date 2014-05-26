@@ -1,0 +1,235 @@
+﻿<PhoneApp2:SMSComposer xmlns:PhoneApp2="clr-namespace:PhoneApp2" xmlns:System="clr-namespace:System;assembly=mscorlib" CountryCode="Nam" Signature="Massa metus dictumst">
+	<PhoneApp2:SMSComposer.GroupList>
+		<PhoneApp2:Group GroupName="Nullam duis aptent">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Aaberg, Jesper" PhoneNumber="(111) 555-0100" PhoneNumberType="Nam"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Adams, Ellen" PhoneNumber="(222) 555-0101" PhoneNumberType="Sed"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Adams, Terry" PhoneNumber="(333) 555-0102" PhoneNumberType="Maecenas"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Adams, Terry" PhoneNumber="(444) 555-0103" PhoneNumberType="Praesent"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Pfeiffer, Michael" PhoneNumber="(222) 555-0105" PhoneNumberType="Class"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Dis" EndsWith="Cras" IsInternational="True" StartsWith="Vestibulum"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Lorem">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Philips, Carol" PhoneNumber="(333) 555-0106" PhoneNumberType="Cras"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Poe, Toni" PhoneNumber="(444) 555-0107" PhoneNumberType="Accumsan"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Hicks, Cassie" PhoneNumber="(555) 555-0108" PhoneNumberType="Dis"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Argentiero, Luca" PhoneNumber="(111) 555-0109" PhoneNumberType="Aenean"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Perry, Brian" PhoneNumber="(222) 555-0110" PhoneNumberType="Duis"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Vivamus" EndsWith="Class" IsInternational="True" StartsWith="Pellentesque"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Praesent fermentum morbi">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Ramos, Luciana" PhoneNumber="(111) 555-0120" PhoneNumberType="Est"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Barber, David" PhoneNumber="(222) 555-0121" PhoneNumberType="Curae"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Jamison, Jay" PhoneNumber="(333) 555-0122" PhoneNumberType="Nunc"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Reid, Miles" PhoneNumber="(444) 555-0123" PhoneNumberType="Bibendum"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Bowen, Eli" PhoneNumber="(111) 555-0134" PhoneNumberType="Donec"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Aliquam" EndsWith="Duis" IsInternational="True" StartsWith="Est"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Nunc condimentum">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Kane, John" PhoneNumber="(222) 555-0145" PhoneNumberType="Hac"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Sarin, Raman" PhoneNumber="(333) 555-0156" PhoneNumberType="Aliquam"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Sato, Naoki" PhoneNumber="(444) 555-0167" PhoneNumberType="Etiam"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Silva, Alexandre" PhoneNumber="(555) 555-0178" PhoneNumberType="Fusce"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Cook, Kevin" PhoneNumber="(111) 555-0189" PhoneNumberType="Lorem"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Aliquet" EndsWith="Maecenas" IsInternational="True" StartsWith="Mauris"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Accumsan">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Li, Yuhong" PhoneNumber="(222) 555-0121" PhoneNumberType="Morbi"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Strande, Amy" PhoneNumber="(111) 555-0122" PhoneNumberType="Nulla"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Makovac, Zrinka" PhoneNumber="(222) 555-0123" PhoneNumberType="Integer"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Miller, Ben" PhoneNumber="(333) 555-0124" PhoneNumberType="Dictumst"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Orton, Jon" PhoneNumber="(444) 555-0125" PhoneNumberType="Proin"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Curae" EndsWith="Vestibulum" IsInternational="True" StartsWith="Nunc"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Fringilla habitasse nulla">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Zhang, Larry" PhoneNumber="(111) 555-0100" PhoneNumberType="Amet"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Gladkikh, Andrey" PhoneNumber="(222) 555-0101" PhoneNumberType="Eleifend"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Meyer, April" PhoneNumber="(333) 555-0102" PhoneNumberType="Ante"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Clark, Molly" PhoneNumber="(444) 555-0103" PhoneNumberType="Mauris"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Dellamore, Luca" PhoneNumber="(222) 555-0105" PhoneNumberType="Nullam"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Curabitur" EndsWith="Curae" IsInternational="True" StartsWith="Consectetuer"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Bibendum vestibulum auctor">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Aaberg, Jesper" PhoneNumber="(333) 555-0106" PhoneNumberType="Arcu"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Adams, Ellen" PhoneNumber="(444) 555-0107" PhoneNumberType="Augue"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Adams, Terry" PhoneNumber="(555) 555-0108" PhoneNumberType="Dolor"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Adams, Terry" PhoneNumber="(111) 555-0109" PhoneNumberType="Leo"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Pfeiffer, Michael" PhoneNumber="(222) 555-0110" PhoneNumberType="Quisque"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Est" EndsWith="Curabitur" IsInternational="True" StartsWith="Suspendisse"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Leo">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Philips, Carol" PhoneNumber="(111) 555-0120" PhoneNumberType="Facilisi"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Poe, Toni" PhoneNumber="(222) 555-0121" PhoneNumberType="Mus"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Hicks, Cassie" PhoneNumber="(333) 555-0122" PhoneNumberType="Nec"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Argentiero, Luca" PhoneNumber="(444) 555-0123" PhoneNumberType="Diam"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Perry, Brian" PhoneNumber="(111) 555-0134" PhoneNumberType="Vivamus"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Duis" EndsWith="Phasellus" IsInternational="True" StartsWith="Hac"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Congue">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Ramos, Luciana" PhoneNumber="(222) 555-0145" PhoneNumberType="Aliquam"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Barber, David" PhoneNumber="(333) 555-0156" PhoneNumberType="Non"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Jamison, Jay" PhoneNumber="(444) 555-0167" PhoneNumberType="Aliquet"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Reid, Miles" PhoneNumber="(555) 555-0178" PhoneNumberType="Eget"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Bowen, Eli" PhoneNumber="(111) 555-0189" PhoneNumberType="Fames"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Blandit" EndsWith="Aliquam" IsInternational="True" StartsWith="Amet"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+		<PhoneApp2:Group GroupName="Amet cursus">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Kane, John" PhoneNumber="(222) 555-0121" PhoneNumberType="Aptent"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Sarin, Raman" PhoneNumber="(111) 555-0122" PhoneNumberType="Auctor"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Sato, Naoki" PhoneNumber="(222) 555-0123" PhoneNumberType="Elit"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Silva, Alexandre" PhoneNumber="(333) 555-0124" PhoneNumberType="Felis"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Cook, Kevin" PhoneNumber="(444) 555-0125" PhoneNumberType="Per"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Mauris" EndsWith="Pellentesque" IsInternational="True" StartsWith="Leo"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+	</PhoneApp2:SMSComposer.GroupList>
+	<PhoneApp2:SMSComposer.PHONE_CONTACTS>
+		<PhoneApp2:Group GroupName="Pellentesque proin mus">
+			<PhoneApp2:Group.ContactsList>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Li, Yuhong" PhoneNumber="(111) 555-0100" PhoneNumberType="Blandit"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Strande, Amy" PhoneNumber="(222) 555-0101" PhoneNumberType="Ipsum"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Makovac, Zrinka" PhoneNumber="(333) 555-0102" PhoneNumberType="Commodo"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Miller, Ben" PhoneNumber="(444) 555-0103" PhoneNumberType="Justo"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Orton, Jon" PhoneNumber="(222) 555-0105" PhoneNumberType="Sed"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Zhang, Larry" PhoneNumber="(333) 555-0106" PhoneNumberType="Conubia"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Gladkikh, Andrey" PhoneNumber="(444) 555-0107" PhoneNumberType="Enim"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Meyer, April" PhoneNumber="(555) 555-0108" PhoneNumberType="Faucibus"/>
+				<PhoneApp2:MyContact Checked="False" DisplayName="Clark, Molly" PhoneNumber="(111) 555-0109" PhoneNumberType="Congue"/>
+				<PhoneApp2:MyContact Checked="True" DisplayName="Dellamore, Luca" PhoneNumber="(222) 555-0110" PhoneNumberType="Sem"/>
+			</PhoneApp2:Group.ContactsList>
+			<PhoneApp2:Group.Filters>
+				<PhoneApp2:ContactFilter Contains="Phasellus" EndsWith="Suspendisse" IsInternational="True" StartsWith="Mus"/>
+			</PhoneApp2:Group.Filters>
+		</PhoneApp2:Group>
+	</PhoneApp2:SMSComposer.PHONE_CONTACTS>
+	<PhoneApp2:SMSComposer.TemplateList>
+		<PhoneApp2:TemplateCatagory CatagoryName="Nulla bibendum erat vestibulum">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Sed gravida morbi</System:String>
+				<System:String>Iaculis adipiscing elit praesent varius</System:String>
+				<System:String>Dis imperdiet est accumsan parturient</System:String>
+				<System:String>Enim lacinia neque laoreet</System:String>
+				<System:String>Vestibulum netus hac leo</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Velit potenti sed">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Porta adipiscing purus</System:String>
+				<System:String>Aenean dictumst eleifend natoque</System:String>
+				<System:String>Parturient mus nec eros nibh</System:String>
+				<System:String>Posuere mauris nullam aptent</System:String>
+				<System:String>Non malesuada vestibulum per risus</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Cursus sed sodales">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Sem sit</System:String>
+				<System:String>Penatibus pretium porttitor auctor facilisi</System:String>
+				<System:String>Tincidunt vel</System:String>
+				<System:String>Rhoncus faucibus</System:String>
+				<System:String>Nisi congue nam</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Hac lectus">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Tristique ultricies</System:String>
+				<System:String>Nisl vitae nunc dis</System:String>
+				<System:String>Dictum vestibulum viverra est</System:String>
+				<System:String>Aliquam habitant</System:String>
+				<System:String>Odio integer</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Fusce interdum phasellus nec ligula">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Orci class quisque venenatis</System:String>
+				<System:String>Adipiscing pede inceptos</System:String>
+				<System:String>Curae donec leo parturient vulputate</System:String>
+				<System:String>Quam mus vestibulum etiam curabitur</System:String>
+				<System:String>Vivamus aliquam libero</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Commodo nunc vestibulum non">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Lobortis lorem litora</System:String>
+				<System:String>Quis urna</System:String>
+				<System:String>Vestibulum adipiscing aliquet</System:String>
+				<System:String>Nascetur cras pharetra parturient</System:String>
+				<System:String>Duis blandit</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Feugiat luctus morbi vestibulum">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Amet ante conubia</System:String>
+				<System:String>Placerat cubilia per arcu</System:String>
+				<System:String>Consequat pulvinar</System:String>
+				<System:String>Sed dapibus</System:String>
+				<System:String>Diam egestas euismod</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Sed dolor fames">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Eget sem elit sit</System:String>
+				<System:String>Adipiscing nulla magnis convallis</System:String>
+				<System:String>Proin mattis gravida parturient</System:String>
+				<System:String>Vel augue mauris sagittis senectus</System:String>
+				<System:String>Vestibulum dignissim nam elementum mollis</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Habitasse ultrices">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Vestibulum adipiscing iaculis sociosqu</System:String>
+				<System:String>Enim felis facilisis</System:String>
+				<System:String>Ipsum suscipit parturient</System:String>
+				<System:String>Fermentum fringilla</System:String>
+				<System:String>Erat eros justo nibh torquent</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+		<PhoneApp2:TemplateCatagory CatagoryName="Magna imperdiet hac">
+			<PhoneApp2:TemplateCatagory.MessageList>
+				<System:String>Lacus vehicula vestibulum</System:String>
+				<System:String>Lorem volutpat</System:String>
+				<System:String>Hendrerit vestibulum maecenas praesent nisi</System:String>
+				<System:String>Nisl himenaeos dis adipiscing</System:String>
+				<System:String>Accumsan est</System:String>
+			</PhoneApp2:TemplateCatagory.MessageList>
+		</PhoneApp2:TemplateCatagory>
+	</PhoneApp2:SMSComposer.TemplateList>
+</PhoneApp2:SMSComposer>

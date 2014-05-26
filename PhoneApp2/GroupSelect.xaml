@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    xmlns:eim="clr-namespace:Microsoft.Expression.Interactivity.Media;assembly=Microsoft.Expression.Interactions"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    x:Class="PhoneApp2.GroupSelect"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:SlideTransition Mode="SlideUpFadeIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SlideTransition Mode="SlideUpFadeIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SlideTransition Mode="SlideDownFadeOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:SlideTransition Mode="SlideDownFadeOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    
+    <Grid Background="White">
+        <Grid x:Name="LayoutRoot" Background="White" RenderTransformOrigin="0.5,0.5" d:DataContext="{d:DesignData /SampleData/SMSComposerSampleData.xaml}">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,0" VerticalAlignment="Top" Height="26">
+                <TextBlock Text="{Binding LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Margin="12,0">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PlusColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock Text="Select Recipent Groups"
+                       Style="{StaticResource PhoneTextExtraLargeStyle}" VerticalAlignment="Bottom" Height="60">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource AppBarBackColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel1" Margin="12,50,12,0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <CheckBox x:Name="checkBox" Content="New Group" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource PlusButton}" FontSize="48" HorizontalContentAlignment="Left" Padding="0,0,0,6" Margin="{StaticResource PhoneMargin}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Tap" SourceName="checkBox">
+                            <ec:NavigateToPageAction TargetPage="/FilterContactsPage.xaml"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </CheckBox>
+                <TextBlock TextWrapping="Wrap" Text="You haven't created a group yet. You can crete it from the button above." Grid.Row="1" HorizontalAlignment="Center" FontSize="26.667" FontFamily="Tahoma" VerticalAlignment="Top" Style="{StaticResource PhoneTextContrastStyle}" Visibility="Collapsed">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PlusButtonHoverColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <Grid x:Name="grid" Grid.Row="2" Margin="0">
+                    <phone:LongListSelector x:Name="listOfGroups" 
+                                            Margin="24,0" ItemsSource="{Binding GroupList}" ItemTemplate="{StaticResource GroupListTemplateStyle}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar BackgroundColor="{StaticResource AppBarBackColor}" ForegroundColor="{StaticResource AppBarFrontColor}" IsMenuEnabled="False"/>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
