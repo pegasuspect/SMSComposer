@@ -16,10 +16,9 @@ namespace PhoneApp2
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        //Phone specific information
         public static SMSComposer APPLICATION_DATA;
+        public static string GroupInputText = "";
 
-        //Aplication lifetime spesific information
         private bool isLoaded = false;
 
         // Constructor
@@ -33,17 +32,17 @@ namespace PhoneApp2
             BuildLocalizedApplicationBar();
         }
 
-        void LoadApplication()
+        private async void LoadApplication()
         {
-            APPLICATION_DATA = new SMSComposer();
-            APPLICATION_DATA.GetPhoneContactsAndSave();
+            APPLICATION_DATA = await IsolatedStorageOperations.Load<SMSComposer>(SMSComposer.FileKey);
+            if (APPLICATION_DATA.PHONE_CONTACTS.ContactsList.Count == 0)
+                APPLICATION_DATA.GatherPhoneContactsAndSave();
+            GroupInputField.Text = GroupInputText;
             isLoaded = true;
         }
 
         private void BuildLocalizedApplicationBar()
         {
-            //Remove Buttons from Last Page
-            ApplicationBar.Buttons.Clear();
 
             // Create a new menu item with the localized string from AppResources.
             ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/feature.email.png", UriKind.RelativeOrAbsolute));

@@ -58,7 +58,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Grid Margin="0,10,-2,642">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="Auto" MinWidth="51"/>
@@ -66,7 +66,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="textBox1" Margin="0,0,0,10" BorderThickness="0" Style="{StaticResource PhoneInputStyle}" InputScope="NameOrPhoneNumber"/>
+                    <TextBox x:Name="GroupInputField" Margin="0,0,0,10" 
+                             BorderThickness="0" Style="{StaticResource PhoneInputStyle}" 
+                             InputScope="NameOrPhoneNumber"/>
                     <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource RoundPlusButtonStyle}" Height="46" Width="48" RenderTransformOrigin="0.458,-0.13" Margin="0,12,0,20" Grid.Column="1">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Tap" SourceName="button">
@@ -75,12 +77,18 @@
                         </i:Interaction.Triggers>
                     </Button>
                 </Grid>
-                <Grid Margin="0,81,0,94">
+                <Grid Margin="0,81,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <StackPanel x:Name="stackPanel" Orientation="Vertical" Margin="0,0,0,10">
-                        <TextBox x:Name="textBox" InputScope="Chat" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True" Style="{StaticResource PhoneInputStyle}" VerticalScrollBarVisibility="Visible" FontSize="21.333" FontFamily="Microsoft Sans Serif" MaxHeight="{Binding ActualHeight, ElementName=stackPanel}" Padding="2,2,2,12"/>
+                        <TextBox x:Name="textBox" InputScope="Chat" 
+                                 TextWrapping="Wrap" VerticalAlignment="Top"
+                                 AcceptsReturn="True" Style="{StaticResource PhoneInputStyle}"
+                                 VerticalScrollBarVisibility="Visible" FontSize="21.333" 
+                                 FontFamily="Microsoft Sans Serif" MinHeight="140"
+                                 MaxHeight="{Binding ActualHeight, ElementName=stackPanel}" 
+                                 Padding="2,2,2,12"/>
                         <Grid Margin="10,0" Height="46">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>

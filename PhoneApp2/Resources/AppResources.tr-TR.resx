@@ -197,4 +197,7 @@
   <data name="CreateGroupText" xml:space="preserve">
     <value>Tamamdır</value>
   </data>
+  <data name="DeleteGroups" xml:space="preserve">
+    <value>Seçilenleri SİL</value>
+  </data>
 </root>

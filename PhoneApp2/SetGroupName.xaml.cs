@@ -20,17 +20,38 @@ namespace PhoneApp2
             Loaded += SetGroupName_Loaded;
         }
 
-        void SetGroupName_Loaded(object sender, RoutedEventArgs e)
+        private void SetGroupName_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (!int.TryParse(NavigationContext.QueryString["index"].ToString(), out index)) {
-                    DataContext = MainPage.APPLICATION_DATA.PHONE_CONTACTS.ContactsList[index];
-                    return;
-                }
-            }catch{}
 
-            DataContext = MainPage.APPLICATION_DATA.PHONE_CONTACTS.ContactsList.LastOrDefault();
+            DataContext = FilterContactsPage.FILTERED_GROUP;
+
+            if (NavigationContext.QueryString.Count > 0 && int.TryParse(NavigationContext.QueryString["index"].ToString(), out index))
+            {
+                DataContext = MainPage.APPLICATION_DATA.PHONE_CONTACTS.ContactsList[index];
+            }
+
+            formatSelectedNamesForSmallTitle();
+            
+        }
+
+        private void formatSelectedNamesForSmallTitle()
+        {
+
+            List<MyContact> list = (DataContext as Group).ContactsList;
+
+            if (list.Count == 0)
+            {
+                MessageBox.Show("En az bir telefon numarası seçmelisiniz!");
+                NavigationService.GoBack();
+            }
+            else if (list.Count == 1)
+            {
+                SmallTitle.Text = list[0].DisplayName;
+            }
+            else if (list.Count >= 2)
+            {
+                SmallTitle.Text = list[0].DisplayName + "; " + list[1].DisplayName + "; ...";
+            }
         }
 
         //TO-DO: Add filters bindings at FilterContactsPage.xaml
@@ -41,17 +62,19 @@ namespace PhoneApp2
         //TO-DO: Website portfolio on osmansekerlen.com
         //TO-DO: About
         //TO-DO: Search for templates
-        private void Button_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        private async void Button_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            MainPage.APPLICATION_DATA.GroupList.Add(new Group()
-            {
-                ContactsList = FilterContactsPage.FILTERED_CONTACTS,
-                GroupName = GroupNameTextBox.Text.ToString()
-            });
+            FilterContactsPage.FILTERED_GROUP.GroupName = GroupNameTextBox.Text.ToString();
+
+            MainPage.APPLICATION_DATA.GroupList.Add(FilterContactsPage.FILTERED_GROUP);
+            await MainPage.APPLICATION_DATA.Save(SMSComposer.FileKey);
+
+            NavigationService.Navigate(new Uri(SMSComposer.PagesRoot + "/GroupSelect.xaml", UriKind.RelativeOrAbsolute));
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
+            NavigationService.RemoveBackEntry();
             NavigationService.RemoveBackEntry();
             NavigationService.RemoveBackEntry();
         }

@@ -63,6 +63,15 @@ namespace PhoneApp2
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public Group Clone()
+        {
+            Group copied = new Group();
+            copied.ContactsList = this.ContactsList;
+            copied.Filters = this.Filters;
+            copied.GroupName = this.GroupName;
+            return copied;
+        }
     }
 
     public partial class ContactFilter

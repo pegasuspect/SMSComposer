@@ -642,7 +642,7 @@
     					<SolidColorBrush Color="{StaticResource PlusButtonHoverColor}"/>
     				</TextBlock.Foreground>
     			</TextBlock>
-    			<TextBlock x:Name="__" TextWrapping="Wrap" Text="{Binding ContactsList[0].DisplayName}" VerticalAlignment="Top" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
+    			<TextBlock TextWrapping="Wrap" Text="{Binding ContactsList[0].DisplayName}" VerticalAlignment="Top" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
     				<TextBlock.Foreground>
     					<SolidColorBrush Color="{StaticResource PlusColor}"/>
     				</TextBlock.Foreground>

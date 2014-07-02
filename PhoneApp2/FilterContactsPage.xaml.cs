@@ -15,7 +15,7 @@ namespace PhoneApp2
     {
         private bool isAllSelected = false;
         private bool isIncludingAllNumbers = false;
-        public static List<MyContact> FILTERED_CONTACTS = new List<MyContact>();
+        public static Group FILTERED_GROUP = new Group();
         // Constructor
         public FilterContactsPage()
         {
@@ -28,15 +28,13 @@ namespace PhoneApp2
 
         void FilterContactsPage_Loaded(object sender, RoutedEventArgs e)
         {
-            FILTERED_CONTACTS = MainPage.APPLICATION_DATA.PHONE_CONTACTS.ContactsList;
-            FILTERED_CONTACTS = FILTERED_CONTACTS.Where(a => a.PhoneNumber.StartsWith(MainPage.APPLICATION_DATA.CountryCode)).ToList();
-            filteredContactsList.ItemsSource = FILTERED_CONTACTS;
+            FILTERED_GROUP = MainPage.APPLICATION_DATA.PHONE_CONTACTS.Clone();
+            FILTERED_GROUP.ContactsList = FILTERED_GROUP.ContactsList.Where(a => a.PhoneNumber.StartsWith(MainPage.APPLICATION_DATA.CountryCode)).ToList();
+            filteredContactsList.ItemsSource = FILTERED_GROUP.ContactsList;
         }
 
         private void BuildLocalizedApplicationBar()
         {
-            //Remove Buttons from Last Page
-            ApplicationBar.Buttons.Clear();
             ApplicationBarIconButton button;
 
             button = new ApplicationBarIconButton()
@@ -63,19 +61,20 @@ namespace PhoneApp2
 
         private void nextButtonClick(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/SetGroupName.xaml", UriKind.RelativeOrAbsolute));
+            FILTERED_GROUP.ContactsList = FILTERED_GROUP.ContactsList.Where(x => x.Checked).ToList();
+            NavigationService.Navigate(new Uri(SMSComposer.PagesRoot + "/SetGroupName.xaml", UriKind.RelativeOrAbsolute));
         }
 
         void button_Click(object sender, EventArgs e)
         {
             isAllSelected = !isAllSelected;
 
-            foreach (MyContact cont in FILTERED_CONTACTS)
+            foreach (MyContact cont in FILTERED_GROUP.ContactsList)
             {
                 cont.Checked = isAllSelected;
             }
 
-            totalSelectedCountTextBox.Text = isAllSelected ? FILTERED_CONTACTS.Count.ToString() : "0";
+            totalSelectedCountTextBox.Text = isAllSelected ? FILTERED_GROUP.ContactsList.Count.ToString() : "0";
 
             ApplicationBarIconButton button = sender as ApplicationBarIconButton;
             button.Text = isAllSelected ? AppResources.SelectAll : AppResources.SelectNone;
@@ -83,12 +82,11 @@ namespace PhoneApp2
             button.IconUri = new Uri(uri, UriKind.RelativeOrAbsolute);
 
             RefreshList();
-
         }
 
         private void CheckBox_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            isIncludingAllNumbers = (sender as CheckBox).IsChecked.Value == true;
+            isIncludingAllNumbers = (sender as CheckBox).IsChecked.Value;
 
             FilterContactsList();
             RefreshList();
@@ -97,13 +95,13 @@ namespace PhoneApp2
         private void RefreshList()
         {
             filteredContactsList.ItemsSource = null;
-            filteredContactsList.ItemsSource = FILTERED_CONTACTS;
+            filteredContactsList.ItemsSource = FILTERED_GROUP.ContactsList;
 
         }
 
         private void FilterContactsList()
         {
-            FILTERED_CONTACTS = MainPage.APPLICATION_DATA.PHONE_CONTACTS.ContactsList.Where(a =>
+            FILTERED_GROUP.ContactsList = MainPage.APPLICATION_DATA.PHONE_CONTACTS.ContactsList.Where(a =>
                 (ContainsTextBox.Text.Length > 0 ? a.DisplayName.ToLowerInvariant().Contains(ContainsTextBox.Text.ToLowerInvariant()) : true) &&
                 (StartsWithTextBox.Text.Length > 0 ? a.DisplayName.ToLowerInvariant().StartsWith(StartsWithTextBox.Text.ToLowerInvariant()) : true) &&
                 (PhoneNumberStartsWithTextBox.Text.Length > 0 ? a.PhoneNumber.StartsWith(MainPage.APPLICATION_DATA.CountryCode + PhoneNumberStartsWithTextBox.Text.ToLowerInvariant()) : true) &&
@@ -111,7 +109,7 @@ namespace PhoneApp2
                 (isIncludingAllNumbers ? true : a.PhoneNumber.StartsWith(MainPage.APPLICATION_DATA.CountryCode))
             ).ToList();
 
-            WarningTextBlock.Visibility = FILTERED_CONTACTS.Count > 0 ? Visibility.Collapsed : Visibility.Visible;
+            WarningTextBlock.Visibility = FILTERED_GROUP.ContactsList.Count > 0 ? Visibility.Collapsed : Visibility.Visible;
         }
 
         private void filteredContactsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -122,7 +120,7 @@ namespace PhoneApp2
 
             (lls.SelectedItem as MyContact).Checked = !(lls.SelectedItem as MyContact).Checked;
             
-            totalSelectedCountTextBox.Text = FILTERED_CONTACTS.Where(a => a.Checked).Count().ToString();
+            totalSelectedCountTextBox.Text = FILTERED_GROUP.ContactsList.Where(a => a.Checked).Count().ToString();
 
 
             lls.SelectedItem = null;

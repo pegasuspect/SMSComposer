@@ -209,4 +209,7 @@
   <data name="CreateGroupText" xml:space="preserve">
     <value>Create</value>
   </data>
+  <data name="DeleteGroups" xml:space="preserve">
+    <value>DELETE selected</value>
+  </data>
 </root>

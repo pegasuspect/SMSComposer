@@ -115,6 +115,15 @@ namespace PhoneApp2.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DELETE selected.
+        /// </summary>
+        public static string DeleteGroups {
+            get {
+                return ResourceManager.GetString("DeleteGroups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apply Filters.
         /// </summary>
         public static string FilterButtonText {

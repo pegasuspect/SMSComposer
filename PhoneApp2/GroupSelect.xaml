@@ -52,16 +52,10 @@
                         <SolidColorBrush Color="{StaticResource PlusColor}"/>
                     </TextBlock.Foreground>
                 </TextBlock>
-                <TextBlock Text="Select Recipent Groups"
-                       Style="{StaticResource PhoneTextExtraLargeStyle}" VerticalAlignment="Bottom" Height="60">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{StaticResource AppBarBackColor}"/>
-                    </TextBlock.Foreground>
-                </TextBlock>
             </StackPanel>
 
             <!--ContentPanel - place additional content here-->
-            <Grid x:Name="ContentPanel1" Margin="12,50,12,0" Grid.Row="1">
+            <Grid x:Name="ContentPanel1" Margin="12,0,12,0" Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -74,14 +68,17 @@
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                 </CheckBox>
-                <TextBlock TextWrapping="Wrap" Text="You haven't created a group yet. You can crete it from the button above." Grid.Row="1" HorizontalAlignment="Center" FontSize="26.667" FontFamily="Tahoma" VerticalAlignment="Top" Style="{StaticResource PhoneTextContrastStyle}" Visibility="Collapsed">
+                <TextBlock Name="NoGroupInfo" TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Center" 
+                           Text="Create a group!" FontSize="26.667" FontFamily="Tahoma" Visibility="Visible"
+                           VerticalAlignment="Top" Style="{StaticResource PhoneTextContrastStyle}" >
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="{StaticResource PlusButtonHoverColor}"/>
                     </TextBlock.Foreground>
                 </TextBlock>
                 <Grid x:Name="grid" Grid.Row="2" Margin="0">
-                    <phone:LongListSelector x:Name="listOfGroups" 
-                                            Margin="24,0" ItemsSource="{Binding GroupList}" ItemTemplate="{StaticResource GroupListTemplateStyle}"/>
+                    <toolkit:LongListMultiSelector x:Name="listOfGroups"
+                            ItemsSource="{Binding GroupList}" 
+                            ItemTemplate="{StaticResource GroupListTemplateStyle}" EnforceIsSelectionEnabled="True"/>
                 </Grid>
             </Grid>
         </Grid>
