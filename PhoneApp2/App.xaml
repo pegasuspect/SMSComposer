@@ -4,7 +4,7 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" 
     xmlns:System="clr-namespace:System;assembly=mscorlib"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:DataStore="clr-namespace:Expression.Blend.DataStore.DataStore" mc:Ignorable="d"
     x:Class="PhoneApp2.App"
     >
 
@@ -14,6 +14,7 @@
             <ResourceDictionary.MergedDictionaries>
     			<ResourceDictionary Source="17.05.xaml"/>
     		</ResourceDictionary.MergedDictionaries>
+        	<DataStore:DataStore x:Key="DataStore" d:IsDataSource="True"/>
             <local:LocalizedStrings xmlns:local="clr-namespace:PhoneApp2" x:Key="LocalizedStrings"/>
         </ResourceDictionary>
     </Application.Resources>

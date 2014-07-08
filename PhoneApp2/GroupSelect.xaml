@@ -78,7 +78,7 @@
                 <Grid x:Name="grid" Grid.Row="2" Margin="0">
                     <toolkit:LongListMultiSelector x:Name="listOfGroups"
                             ItemsSource="{Binding GroupList}" 
-                            ItemTemplate="{StaticResource GroupListTemplateStyle}" EnforceIsSelectionEnabled="True"/>
+                            ItemTemplate="{StaticResource GroupListTemplateStyle}"/>
                 </Grid>
             </Grid>
         </Grid>

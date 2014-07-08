@@ -43,10 +43,20 @@ namespace PhoneApp2
             appBarButton.Click += appBarButton_Click2;
             ApplicationBar.Buttons.Add(appBarButton);
 
-            appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/cancel.png", UriKind.RelativeOrAbsolute));
+            appBarButton = new ApplicationBarIconButton(new Uri("/Toolkit.Content/ApplicationBar.Select.png", UriKind.RelativeOrAbsolute));
+            appBarButton.Text = AppResources.DeleteGroups;
+            appBarButton.Click += appBarButton_Click3;
+            ApplicationBar.Buttons.Add(appBarButton);
+
+            appBarButton = new ApplicationBarIconButton(new Uri("/Toolkit.Content/ApplicationBar.Delete.png", UriKind.RelativeOrAbsolute));
             appBarButton.Text = AppResources.DeleteGroups;
             appBarButton.Click += appBarButton_Click;
             ApplicationBar.Buttons.Add(appBarButton);
+        }
+
+        private void appBarButton_Click3(object sender, EventArgs e)
+        {
+            listOfGroups.IsSelectionEnabled = !listOfGroups.IsSelectionEnabled;
         }
 
         private void appBarButton_Click2(object sender, EventArgs e)
@@ -77,5 +87,12 @@ namespace PhoneApp2
             MessageBox.Show("You haven't chosen any groups");
         }
 
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MainPage.GroupInputText += (sender as Group).GroupName + "; ";
+
+            NavigationService.RemoveBackEntry();
+            NavigationService.Navigate(new Uri(SMSComposer.PagesRoot + "/MainPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

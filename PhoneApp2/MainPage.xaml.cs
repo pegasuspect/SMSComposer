@@ -47,7 +47,18 @@ namespace PhoneApp2
             // Create a new menu item with the localized string from AppResources.
             ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/feature.email.png", UriKind.RelativeOrAbsolute));
             appBarButton.Text = AppResources.MainPageOK;
+            appBarButton.Click += appBarButton_Click;
             ApplicationBar.Buttons.Add(appBarButton);
+        }
+
+        void appBarButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBox_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri(SMSComposer.PagesRoot + "/UseTemplate.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

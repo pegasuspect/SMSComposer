@@ -635,20 +635,20 @@
     <QuadraticEase x:Key="SlideDownEasingFunction" EasingMode="EaseOut"/>
     <QuadraticEase x:Key="SlideUpEasingFunction" EasingMode="EaseIn"/>
     <DataTemplate x:Key="GroupListTemplateStyle">
-    	<Grid>
-    		<StackPanel Margin="0,0,0,12" Orientation="Vertical">
-    			<TextBlock TextWrapping="Wrap" Text="{Binding GroupName}" VerticalAlignment="Top" FontFamily="{StaticResource PhoneFontFamilyBold}" FontSize="{StaticResource PhoneFontSizeMedium}">
-    				<TextBlock.Foreground>
-    					<SolidColorBrush Color="{StaticResource PlusButtonHoverColor}"/>
-    				</TextBlock.Foreground>
-    			</TextBlock>
-    			<TextBlock TextWrapping="Wrap" Text="{Binding ContactsList[0].DisplayName}" VerticalAlignment="Top" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
-    				<TextBlock.Foreground>
-    					<SolidColorBrush Color="{StaticResource PlusColor}"/>
-    				</TextBlock.Foreground>
-    			</TextBlock>
-    		</StackPanel>
-    	</Grid>
+        <Grid>
+            <StackPanel Orientation="Vertical">
+                <TextBlock TextWrapping="Wrap" Text="{Binding GroupName}" VerticalAlignment="Top" FontFamily="{StaticResource PhoneFontFamilyBold}" FontSize="{StaticResource PhoneFontSizeMedium}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PlusButtonHoverColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Text="{Binding ContactsList[0].DisplayName}" VerticalAlignment="Top" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{StaticResource PlusColor}"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
     </DataTemplate>
     <!-- Resource dictionary entries should be defined here. -->
 </ResourceDictionary>

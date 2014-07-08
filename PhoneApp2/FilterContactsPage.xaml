@@ -261,7 +261,7 @@
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
-						<Border VerticalAlignment="Center" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                        <Border VerticalAlignment="Center" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
 						<ToggleButton x:Name="toggleButton" Grid.Column="1" BorderBrush="Black" Style="{StaticResource FiltersToggleButtonStyle}">
 							<i:Interaction.Triggers>
 								<i:EventTrigger EventName="Unchecked" SourceName="toggleButton">

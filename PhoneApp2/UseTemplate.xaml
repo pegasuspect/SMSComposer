@@ -1,0 +1,64 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp2.UseTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#2b5a83">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid VerticalAlignment="Top" Height="82" 
+              Background="#2b5a83" Canvas.ZIndex="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="icon0" Grid.Column="0" 
+                   Source="/Assets/ApplicationIcon.png" 
+                   Opacity="0.5" Tap="icon0_Tap"/>
+            <Image x:Name="icon1" Grid.Column="1" 
+                   Source="/Assets/ApplicationIcon.png" 
+                   Opacity="0.5" Tap="icon1_Tap" />
+        </Grid>
+        
+        <!--Pivot Control-->
+        <phone:Pivot Grid.Row="1" x:Name="MainPivot" 
+                     Foreground="White" Background="#2b5a83" 
+                     SelectionChanged="Pivot_SelectionChanged">
+            
+            <!--Pivot item one-->
+            <phone:PivotItem>
+                <TextBlock>
+                    Deneme
+                </TextBlock>
+            </phone:PivotItem>
+
+            <!--Pivot item two-->
+            <phone:PivotItem>
+                <TextBlock>
+                    Deneme 2
+                </TextBlock>
+            </phone:PivotItem>
+
+            <!--Pivot item three-->
+            <phone:PivotItem>
+                <TextBlock>
+                    Deneme 3
+                </TextBlock>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>

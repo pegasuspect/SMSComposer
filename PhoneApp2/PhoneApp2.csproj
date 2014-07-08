@@ -94,6 +94,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ContactGroups.cs" />
+    <Compile Include="DataStore\DataStore\DataStore.xaml.cs">
+      <DependentUpon>DataStore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FilterContactsPage.xaml.cs">
       <DependentUpon>FilterContactsPage.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,9 @@
       <DependentUpon>SetGroupName.xaml</DependentUpon>
     </Compile>
     <Compile Include="SMSComposer.cs" />
+    <Compile Include="UseTemplate.xaml.cs">
+      <DependentUpon>UseTemplate.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -129,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="17.05.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataStore\DataStore\DataStore.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -147,6 +157,10 @@
     <Page Include="SetGroupName.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UseTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -215,12 +229,14 @@
     <Content Include="Assets\AppBar\check.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <DesignTimeOnly Include="DataStore\DataStore\DataStore.xsd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
